@@ -26,16 +26,24 @@ The backend is powered by a FastAPI server (`main.py`) that processes requests f
 
 ## Setup and Usage
 
-1. Install the Chrome extension (instructions for loading unpacked extension).
-2. Set up the backend server:
+1. Clone the repository and navigate to the project directory.
+2. Run the setup script to download and set up the required `customAgents` package:
+   ```
+   bash ./setup.sh
+   ```
+3. Install the Chrome extension (instructions for loading unpacked extension).
+4. Set up the backend server:
    - Ensure you have Python installed.
-   - Install required dependencies (FastAPI, uvicorn, and any other necessary packages).
+   - Install required dependencies:
+     ```
+     pip install -r requirements.txt
+     ```
    - Configure your API key in `config/llm.json`.
-3. Run the backend server:
+5. Run the backend server:
    ```
    python main.py
    ```
-4. The extension is now ready to use. Click on the extension icon in Chrome to open the chat interface.
+6. The extension is now ready to use. Click on the extension icon in Chrome to open the chat interface.
 
 **Note:** The backend server (`main.py`) must be running for the extension to work properly.
 
