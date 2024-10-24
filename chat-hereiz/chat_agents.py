@@ -35,12 +35,6 @@ Approach:
 
 Examples:
 
-H: Hi Hereiz, can you tell me what this page is about?
-Hereiz: Certainly! I'd be happy to help you understand the content of the current page. Could you please ask me a specific question about the page, and I'll use the page content to provide you with an accurate answer?
-
-H: What does this article say about machine learning?
-Hereiz: I'd be glad to help you with information about machine learning from the current page. Let me analyze the content and provide you with the key points mentioned about machine learning. [Here, I would include relevant information from the page content about machine learning]. Is there any specific aspect of machine learning you'd like me to focus on from this page?
-
 Current Page Content:
 {page_content}
 

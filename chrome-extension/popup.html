@@ -4,107 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hereiz chrome extension</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="libs/marked.min.js"></script>
     <script src="popup.js" defer></script>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            width: 400px;
-            padding: 20px;
-            background-color: #1e1e1e;
-            color: #e0e0e0;
-        }
-        h1 {
-            color: #4da6ff;
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        #chatContainer {
-            display: flex;
-            flex-direction: column;
-            height: 400px;
-            background-color: #2d2d2d;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
-        #chatHistory {
-            flex-grow: 1;
-            overflow-y: auto;
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-        }
-        #inputContainer {
-            display: flex;
-            padding: 10px;
-            background-color: #1e1e1e;
-        }
-        #userInput {
-            flex-grow: 1;
-            padding: 10px;
-            border: 1px solid #4da6ff;
-            border-radius: 20px;
-            resize: none;
-            font-size: 14px;
-            background-color: #333333;
-            color: #e0e0e0;
-            overflow-y: hidden;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        #sendBtn {
-            margin-left: 10px;
-            padding: 10px 20px;
-            background-color: #4da6ff;
-            color: #1e1e1e;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        #sendBtn:hover {
-            background-color: #3385ff;
-        }
-        .message {
-            max-width: 80%;
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 10px;
-            word-wrap: break-word;
-        }
-        .user-message {
-            align-self: flex-end;
-            background-color: #4da6ff;
-            color: #0f0707;
-        }
-        .ai-message {
-            align-self: flex-start;
-            background-color: #333333;
-            color: #e0e0e0;
-        }
-        .ai-message p {
-            margin: 0;
-        }
-        .ai-message pre {
-            background-color: #1e1e1e;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-        .ai-message code {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.9em;
-            color: #4da6ff;
-        }
-        #errorMessage {
-            color: #ff4d4d;
-            text-align: center;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-    </style>
 </head>
 <body>
     <h1>hereiz AI Assistant</h1>
@@ -116,6 +18,5 @@
         </div>
     </div>
     <div id="errorMessage"></div>
-    <script src="marked.min.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 import json
 import uvicorn
 from chat_agents import ChatLLM, ChatPrompt, ChatAgent
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Response
 from pydantic import BaseModel
 
 
@@ -18,6 +18,9 @@ class ChatInput(BaseModel):
     question: str
     page_content: str
 
+class ChatResponse(BaseModel):
+    reply: str
+
 @app.post("/chat-hereiz")
 async def chat_hereiz(chat_input: ChatInput):
     try:
@@ -32,8 +35,9 @@ async def chat_hereiz(chat_input: ChatInput):
         })
 
         response = chat_agent.loop()
+        markdown_response = f"{response}"
         
-        return {"response": response}
+        return ChatResponse(reply=markdown_response)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
