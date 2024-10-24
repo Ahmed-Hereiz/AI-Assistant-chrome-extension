@@ -44,10 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) {
               throw new Error(`HTTP error! status: ${response.status}`);
             }
-            return response.text();
+            return response.json();
           })
           .then(data => {
-            addMessageToChat('ai', data);
+            addMessageToChat('ai', data.reply);
           })
           .catch(error => {
             console.error('Error:', error);
@@ -64,12 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     messageElement.classList.add('message', `${sender}-message`);
     
     if (sender === 'ai') {
-      try {
-        messageElement.innerHTML = marked.parse(text);
-      } catch (error) {
-        console.error('Error parsing markdown:', error);
-        messageElement.textContent = text;
-      }
+      messageElement.innerHTML = marked.parse(text);
     } else {
       messageElement.textContent = text;
     }
