@@ -2,3 +2,5 @@ config/llm.json
 */__pycache__/*
 */__pycache__
 .venv/
+chat-hereiz/customAgents*
+chat-hereiz/tests*
